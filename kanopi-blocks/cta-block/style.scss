@@ -1,0 +1,13 @@
+.wp-block-kanopi-blocks-cta-block {
+    padding: 20px;
+    background-size: cover;
+    margin-bottom: 20px;
+
+    &.shadow {
+        box-shadow: 5px 5px 15px 5px #000000;
+    }
+
+    &.radius {
+        border-radius: 20px;
+    }
+}

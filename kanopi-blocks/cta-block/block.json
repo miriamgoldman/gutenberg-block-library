@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "kanopi-blocks/cta-block",
+	"version": "0.1.0",
+	"title": "CTA Block",
+	"category": "text",
+	"icon": "links",
+	"description": "This is just a test of the new block.",
+	"attributes": {
+		"downloadFile": {
+			"type": "object"
+		},
+		"extraStyles": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"html": true,
+		"className": true
+	},
+	"textdomain": "kanopi-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle":  "file:/index.css",
+	"style": "file:./style-index.css"
+}

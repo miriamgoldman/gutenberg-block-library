@@ -1,0 +1,22 @@
+{
+	"name": "kanopi-blocks",
+	"version": "0.1.0",
+	"description": "Custom Gutenberg-based Blocks, so ACF would not be needed.",
+	"author": "Kanopi Studios",
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"build": "wp-scripts build --webpack-copy-php --webpack-src-dir=kanopi-blocks --output-path=build/kanopi-blocks",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-copy-php --webpack-src-dir=kanopi-blocks --output-path=build/kanopi-blocks"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^23.5.0"
+	},
+	"dependencies": {
+		"@wordpress/components": "^19.15.0"
+	}
+}
