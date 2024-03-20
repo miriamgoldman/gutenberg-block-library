@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "kanopi-blocks/cta-block",
+	"name": "mag-blocks/cta-block",
 	"version": "0.1.0",
 	"title": "CTA Block",
 	"category": "text",
@@ -19,7 +19,7 @@
 		"html": true,
 		"className": true
 	},
-	"textdomain": "kanopi-blocks",
+	"textdomain": "mag-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle":  "file:/index.css",
 	"style": "file:./style-index.css"

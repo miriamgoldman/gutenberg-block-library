@@ -9,6 +9,7 @@
  * @package mag-blocks
  */
 
-defined( 'ABSPATH' ) || exit;
-
-require plugin_dir_path( __FILE__ ) . 'build/mag-blocks/cta-block/cta.php';
+function create_cta_block_init() {
+	register_block_type( __DIR__ );
+}
+add_action( 'init', 'create_cta_block_init' );
