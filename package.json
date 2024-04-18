@@ -5,18 +5,13 @@
 	"author": "Miriam Goldman",
 	"license": "GPL-2.0-or-later",
 	"scripts": {
-		"prod": "wp-scripts build --webpack-copy-php --webpack-src-dir=mag-blocks --output-path=build/mag-blocks",
-		"format": "wp-scripts format",
-		"lint:css": "wp-scripts lint-style",
-		"lint:js": "wp-scripts lint-js",
-		"packages-update": "wp-scripts packages-update",
-		"plugin-zip": "wp-scripts plugin-zip",
-		"dev": "wp-scripts start --webpack-copy-php --webpack-src-dir=mag-blocks --output-path=build/mag-blocks"
+		"build": "wp-scripts build",
+		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^23.5.0"
+		"@wordpress/scripts": "^27.6.0"
 	},
 	"dependencies": {
-		"@wordpress/components": "^19.15.0"
+		"@wordpress/server-side-render": "^4.32.0"
 	}
 }

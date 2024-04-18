@@ -11,4 +11,18 @@
 
 defined( 'ABSPATH' ) || exit;
 
-require plugin_dir_path( __FILE__ ) . 'build/mag-blocks/cta-block/cta.php';
+function wpdocs_register_multiple_blocks() {
+	$build_dir = __DIR__ . '/build/blocks';
+
+	foreach ( scandir( $build_dir ) as $result ) {
+		$block_location = $build_dir . '/' . $result;
+
+		if ( ! is_dir( $block_location ) || '.' === $result || '..' === $result ) {
+			continue;
+		}
+
+		register_block_type( $block_location );
+	}
+}
+
+add_action( 'init', 'wpdocs_register_multiple_blocks' );
