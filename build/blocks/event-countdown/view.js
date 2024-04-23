@@ -1,1 +1,52 @@
-(()=>{var t,e=document.querySelector(".countdown"),n=new Date(e.dataset.date),a=e.dataset.type,o=e.querySelector(".countdown-days span"),r=e.querySelector(".countdown-hours span"),s=e.querySelector(".countdown-minutes span"),c=e.querySelector(".countdown-seconds span");switch(a){case"days":t=864e5;break;case"hours":t=36e5;break;case"minutes":t=6e4;break;default:t=1e3}setInterval((function(){var e=new Date,a=n-e;if(a<=0)return clearInterval(t),o&&(o.textContent="0"),r&&(r.textContent="0"),s&&(s.textContent="0"),void(c&&(c.textContent="0"));var u=Math.max(0,Math.floor(a/864e5)),d=Math.max(0,Math.floor(a%864e5/36e5)),l=Math.max(0,Math.floor(a%36e5/6e4)),x=Math.max(0,Math.floor(a%6e4/1e3));o&&(o.textContent=u),r&&(r.textContent=d),s&&(s.textContent=l),c&&(c.textContent=x)}),t)})();
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!********************************************!*\
+  !*** ./src/blocks/event-countdown/view.js ***!
+  \********************************************/
+var countdownElement = document.querySelector(".countdown");
+var countdownDate = new Date(countdownElement.dataset.date);
+var countdownType = countdownElement.dataset.type;
+var daysElement = countdownElement.querySelector(".countdown-days span");
+var hoursElement = countdownElement.querySelector(".countdown-hours span");
+var minutesElement = countdownElement.querySelector(".countdown-minutes span");
+var secondsElement = countdownElement.querySelector(".countdown-seconds span");
+var interval;
+switch (countdownType) {
+  case "days":
+    interval = 1000 * 60 * 60 * 24;
+    break;
+  case "hours":
+    interval = 1000 * 60 * 60;
+    break;
+  case "minutes":
+    interval = 1000 * 60;
+    break;
+  case "seconds":
+    interval = 1000;
+    break;
+  default:
+    interval = 1000;
+}
+setInterval(function () {
+  var now = new Date();
+  var timeDifference = countdownDate - now;
+  if (timeDifference <= 0) {
+    clearInterval(interval);
+    if (daysElement) daysElement.textContent = "0";
+    if (hoursElement) hoursElement.textContent = "0";
+    if (minutesElement) minutesElement.textContent = "0";
+    if (secondsElement) secondsElement.textContent = "0";
+    return;
+  }
+  var remainingDays = Math.max(0, Math.floor(timeDifference / (1000 * 60 * 60 * 24)));
+  var remainingHours = Math.max(0, Math.floor(timeDifference % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
+  var remainingMinutes = Math.max(0, Math.floor(timeDifference % (1000 * 60 * 60) / (1000 * 60)));
+  var remainingSeconds = Math.max(0, Math.floor(timeDifference % (1000 * 60) / 1000));
+  if (daysElement) daysElement.textContent = remainingDays;
+  if (hoursElement) hoursElement.textContent = remainingHours;
+  if (minutesElement) minutesElement.textContent = remainingMinutes;
+  if (secondsElement) secondsElement.textContent = remainingSeconds;
+}, interval);
+/******/ })()
+;
+//# sourceMappingURL=view.js.map
