@@ -9,7 +9,7 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^27.6.0"
+		"@wordpress/scripts": "^30.9.0"
 	},
 	"dependencies": {
 		"@wordpress/server-side-render": "^4.32.0"
