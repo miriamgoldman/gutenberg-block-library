@@ -1,0 +1,16 @@
+{
+    "name": "miriamgoldman/gutenberg-block-library",
+    "description": "Custom Gutenberg blocks for WordPress.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+      {
+        "name": "Miriam Goldman",
+        "email": "sensei.miriam@gmail.com"
+      }
+    ],
+    "require": {
+      "php": ">=7.4"
+    }
+  }
+  
